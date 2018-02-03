@@ -14,9 +14,9 @@ public class RouteTravels{
 	String routeId;
 	
 	@Index
-	StorageLocation fromLocation;
+	StorageBin fromLocation;
 	@Index
-	StorageLocation toLocation;
+	StorageBin toLocation;
 	
 	List<GeoPt>  routePoints;
 	String routeAsGeoJson;
@@ -29,16 +29,16 @@ public class RouteTravels{
 	public void setRouteId(String routeId) {
 		this.routeId = routeId;
 	}
-	public StorageLocation getFromLocation() {
+	public StorageBin getFromLocation() {
 		return fromLocation;
 	}
-	public void setFromLocation(StorageLocation fromLocation) {
+	public void setFromLocation(StorageBin fromLocation) {
 		this.fromLocation = fromLocation;
 	}
-	public StorageLocation getToLocation() {
+	public StorageBin getToLocation() {
 		return toLocation;
 	}
-	public void setToLocation(StorageLocation toLocation) {
+	public void setToLocation(StorageBin toLocation) {
 		this.toLocation = toLocation;
 	}
 	public List<GeoPt> getRoutePoints() {

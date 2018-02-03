@@ -6,7 +6,7 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 
 @Entity
-public class StorageLocation{
+public class StorageBin{
 
 	@Id
 	String locationId;

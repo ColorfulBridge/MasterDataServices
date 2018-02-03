@@ -6,7 +6,7 @@ import javax.servlet.ServletContextListener;
 import com.googlecode.objectify.ObjectifyService;
 
 import de.dietzm.colorfulbridge.foundation.datamodel.Route;
-import de.dietzm.colorfulbridge.foundation.datamodel.StorageLocation;
+import de.dietzm.colorfulbridge.foundation.datamodel.StorageBin;
 import de.dietzm.colorfulbridge.foundation.datamodel.Warehouse;
 
 public class OfyStartup implements ServletContextListener {
@@ -14,7 +14,7 @@ public class OfyStartup implements ServletContextListener {
 	static {
         ObjectifyService.register(Warehouse.class);
         ObjectifyService.register(Route.class);
-        ObjectifyService.register(StorageLocation.class);
+        ObjectifyService.register(StorageBin.class);
     }
 
    	@Override
