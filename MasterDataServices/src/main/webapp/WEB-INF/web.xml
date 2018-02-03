@@ -8,7 +8,7 @@
     <servlet-class>com.google.api.server.spi.EndpointsServlet</servlet-class>
     <init-param> 
       <param-name>services</param-name>
-      <param-value>de.dietzm.colorfulbridge.foundation.services.WarehouseService,de.dietzm.colorfulbridge.foundation.services.RouteService,de.dietzm.colorfulbridge.foundation.services.StorageLocationService</param-value>
+      <param-value>de.dietzm.colorfulbridge.masterdata.services.WarehouseService,de.dietzm.colorfulbridge.masterdata.services.RouteService,de.dietzm.colorfulbridge.masterdata.services.StorageBinService</param-value>
     </init-param>
     <init-param>
       <param-name>restricted</param-name>
@@ -20,7 +20,7 @@
     <url-pattern>/_ah/api/*</url-pattern>
   </servlet-mapping>
   <listener>
-    <listener-class>de.dietzm.colorfulbridge.foundation.startup.OfyStartup</listener-class>
+    <listener-class>de.dietzm.colorfulbridge.masterdata.startup.OfyStartup</listener-class>
   </listener>
   <filter>
     <filter-name>ObjectifyFilter</filter-name>

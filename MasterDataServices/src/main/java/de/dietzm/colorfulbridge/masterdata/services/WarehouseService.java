@@ -1,4 +1,4 @@
-package de.dietzm.colorfulbridge.foundation.services;
+package de.dietzm.colorfulbridge.masterdata.services;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
@@ -8,7 +8,7 @@ import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.Named;
 
-import de.dietzm.colorfulbridge.foundation.datamodel.Warehouse;
+import de.dietzm.colorfulbridge.masterdata.datamodel.Warehouse;
 
 @Api(name = "warehouses", version = "v1")
 public class WarehouseService {
@@ -19,7 +19,7 @@ public class WarehouseService {
 	}
 
 	@ApiMethod(name="warehouses.create", httpMethod = "post")
-	public Warehouse createWarehouse(@Named("warehouse.data")Warehouse newWarehouse) {
+	public Warehouse createWarehouse(Warehouse newWarehouse) {
 		//Warehouse instance = gson.fromJson(data, Warehouse.class);
 		ofy().save().entity(newWarehouse).now();
 		return newWarehouse;

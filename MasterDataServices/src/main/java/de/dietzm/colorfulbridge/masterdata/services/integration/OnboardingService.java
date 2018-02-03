@@ -1,4 +1,4 @@
-package de.dietzm.colorfulbridge.foundation.services.integration;
+package de.dietzm.colorfulbridge.masterdata.services.integration;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
@@ -9,12 +9,12 @@ import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.Named;
 
-import de.dietzm.colorfulbridge.foundation.datamodel.Warehouse;
+import de.dietzm.colorfulbridge.masterdata.datamodel.Warehouse;
 
 @Api(name="onboarding", version = "v1")
-public class WarehouseOnboardingService {
+public class OnboardingService {
 		
-	  Logger logger = LoggerFactory.getLogger(WarehouseOnboardingService.class);
+	  Logger logger = LoggerFactory.getLogger(OnboardingService.class);
 	
 	  @ApiMethod(name = "onboarding.warehouse")
 	  public Warehouse createWarehouse(@Named String id,@Named String name) {

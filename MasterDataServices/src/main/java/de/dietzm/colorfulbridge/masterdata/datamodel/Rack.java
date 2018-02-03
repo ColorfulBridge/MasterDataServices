@@ -1,4 +1,4 @@
-package de.dietzm.colorfulbridge.foundation.datamodel;
+package de.dietzm.colorfulbridge.masterdata.datamodel;
 
 import java.util.List;
 

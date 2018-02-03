@@ -1,4 +1,4 @@
-package de.dietzm.colorfulbridge.foundation.services;
+package de.dietzm.colorfulbridge.masterdata.services;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
@@ -6,18 +6,19 @@ import java.util.List;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
+import com.google.api.server.spi.config.Named;
 
-import de.dietzm.colorfulbridge.foundation.datamodel.StorageBin;
+import de.dietzm.colorfulbridge.masterdata.datamodel.StorageBin;
 
 @Api(name="storagebins", version = "v1")
-public class StorageLocationService {
+public class StorageBinService {
 
 	  @ApiMethod(name = "storagebins.query")
-	  public List<StorageBin> getStorageBinsOfWarehouse(String warehouseId) {
+	  public List<StorageBin> getStorageBinsOfWarehouse(@Named("warehouseId") String warehouseId) {
 	    return ofy().load().type(StorageBin.class).filter("warehouseId ==", warehouseId).list();
 	  }
 
-	  @ApiMethod(name = "storagebins.query")
+	  @ApiMethod(name = "storagebins.create", httpMethod="POST")
 	  public StorageBin createStorageBin(StorageBin storageBin) {
 		  ofy().save().entity(storageBin).now();
 			return storageBin;

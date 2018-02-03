@@ -1,4 +1,4 @@
-package de.dietzm.colorfulbridge.foundation.services;
+package de.dietzm.colorfulbridge.masterdata.services;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
@@ -7,7 +7,7 @@ import java.util.List;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 
-import de.dietzm.colorfulbridge.foundation.datamodel.Rack;
+import de.dietzm.colorfulbridge.masterdata.datamodel.Rack;
 
 @Api(name="racks", version = "v1")
 public class RackService {

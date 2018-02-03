@@ -1,13 +1,13 @@
-package de.dietzm.colorfulbridge.foundation.startup;
+package de.dietzm.colorfulbridge.masterdata.startup;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 import com.googlecode.objectify.ObjectifyService;
 
-import de.dietzm.colorfulbridge.foundation.datamodel.Route;
-import de.dietzm.colorfulbridge.foundation.datamodel.StorageBin;
-import de.dietzm.colorfulbridge.foundation.datamodel.Warehouse;
+import de.dietzm.colorfulbridge.masterdata.datamodel.Route;
+import de.dietzm.colorfulbridge.masterdata.datamodel.StorageBin;
+import de.dietzm.colorfulbridge.masterdata.datamodel.Warehouse;
 
 public class OfyStartup implements ServletContextListener {
     
