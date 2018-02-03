@@ -9,13 +9,18 @@ import com.google.api.server.spi.config.ApiMethod;
 
 import de.dietzm.colorfulbridge.foundation.datamodel.StorageBin;
 
-@Api(name="storagelocations", version = "v1")
+@Api(name="storagebins", version = "v1")
 public class StorageLocationService {
 
-	  @ApiMethod(name = "storagelocations.query")
-	  public List<StorageBin> getStorageLocations() {
-	    return ofy().load().type(StorageBin.class).filter("id !=", null).list();
+	  @ApiMethod(name = "storagebins.query")
+	  public List<StorageBin> getStorageBinsOfWarehouse(String warehouseId) {
+	    return ofy().load().type(StorageBin.class).filter("warehouseId ==", warehouseId).list();
 	  }
 
+	  @ApiMethod(name = "storagebins.query")
+	  public StorageBin createStorageBin(StorageBin storageBin) {
+		  ofy().save().entity(storageBin).now();
+			return storageBin;
+	  }
 	
 }

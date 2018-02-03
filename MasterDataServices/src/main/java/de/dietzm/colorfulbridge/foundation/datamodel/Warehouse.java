@@ -12,7 +12,7 @@ public class Warehouse{
 	String warehouseId;
 	
 	@Index
-	String wkn; 
+	String name; 
 	
 	GeoPt location;
 
@@ -24,12 +24,12 @@ public class Warehouse{
 		this.warehouseId = warehouseId;
 	}
 
-	public String getWkn() {
-		return wkn;
+	public String getName() {
+		return name;
 	}
 
-	public void setWkn(String wkn) {
-		this.wkn = wkn;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public GeoPt getLocation() {

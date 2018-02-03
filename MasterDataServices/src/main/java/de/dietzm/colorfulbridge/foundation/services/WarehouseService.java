@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
+import com.google.api.server.spi.config.Named;
 
 import de.dietzm.colorfulbridge.foundation.datamodel.Warehouse;
 
@@ -18,7 +19,7 @@ public class WarehouseService {
 	}
 
 	@ApiMethod(name="warehouses.create", httpMethod = "post")
-	public Warehouse createWarehouse(Warehouse newWarehouse) {
+	public Warehouse createWarehouse(@Named("warehouse.data")Warehouse newWarehouse) {
 		//Warehouse instance = gson.fromJson(data, Warehouse.class);
 		ofy().save().entity(newWarehouse).now();
 		return newWarehouse;

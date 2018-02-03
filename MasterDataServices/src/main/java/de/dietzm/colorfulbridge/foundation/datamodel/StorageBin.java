@@ -12,7 +12,10 @@ public class StorageBin{
 	String locationId;
 	
 	@Index
-	String wkn; 
+	String name; 
+	
+	@Index
+	String warehouseId;
 	
 	GeoPt location;
 
@@ -24,12 +27,22 @@ public class StorageBin{
 		this.locationId = locationId;
 	}
 
-	public String getWkn() {
-		return wkn;
+	
+
+	public String getName() {
+		return name;
 	}
 
-	public void setWkn(String wkn) {
-		this.wkn = wkn;
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getWarehouseId() {
+		return warehouseId;
+	}
+
+	public void setWarehouseId(String warehouseId) {
+		this.warehouseId = warehouseId;
 	}
 
 	public GeoPt getLocation() {
