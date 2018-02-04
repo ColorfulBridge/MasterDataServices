@@ -1,7 +1,5 @@
 package de.dietzm.colorfulbridge.masterdata.services;
 
-import static com.googlecode.objectify.ObjectifyService.ofy;
-
 import java.util.List;
 
 import com.google.api.server.spi.config.Api;
