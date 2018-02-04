@@ -9,18 +9,19 @@ import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.Named;
 
 import de.dietzm.colorfulbridge.masterdata.datamodel.StorageBin;
+import de.dietzm.colorfulbridge.masterdata.objectify.OfyManager;
 
 @Api(name="storagebins", version = "v1")
 public class StorageBinService {
 
 	  @ApiMethod(name = "storagebins.query")
 	  public List<StorageBin> getStorageBinsOfWarehouse(@Named("warehouseId") String warehouseId) {
-	    return ofy().load().type(StorageBin.class).filter("warehouseId ==", warehouseId).list();
+	    return OfyManager.ofy().load().type(StorageBin.class).filter("warehouseId ==", warehouseId).list();
 	  }
 
 	  @ApiMethod(name = "storagebins.create", httpMethod="POST")
 	  public StorageBin createStorageBin(StorageBin storageBin) {
-		  ofy().save().entity(storageBin).now();
+		  OfyManager.ofy().save().entity(storageBin).now();
 			return storageBin;
 	  }
 	

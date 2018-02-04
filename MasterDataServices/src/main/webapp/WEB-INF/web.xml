@@ -20,8 +20,8 @@
     <url-pattern>/_ah/api/*</url-pattern>
   </servlet-mapping>
   <listener>
-    <listener-class>de.dietzm.colorfulbridge.masterdata.startup.OfyStartup</listener-class>
-  </listener>
+    <listener-class>de.dietzm.colorfulbridge.masterdata.objectify.OfyManager</listener-class>
+  </listener>  
   <filter>
     <filter-name>ObjectifyFilter</filter-name>
     <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
