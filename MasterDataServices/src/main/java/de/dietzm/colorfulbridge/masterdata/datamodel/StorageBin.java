@@ -1,6 +1,5 @@
 package de.dietzm.colorfulbridge.masterdata.datamodel;
 
-import com.google.appengine.api.datastore.GeoPt;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
@@ -17,7 +16,13 @@ public class StorageBin{
 	@Index
 	String warehouseId;
 	
-	GeoPt location;
+	int aigle;
+	int rack;
+	int level;
+	
+	float latitude;
+	float longitude;
+	
 
 	public String getLocationId() {
 		return locationId;
@@ -45,13 +50,46 @@ public class StorageBin{
 		this.warehouseId = warehouseId;
 	}
 
-	public GeoPt getLocation() {
-		return location;
+	public int getAigle() {
+		return aigle;
 	}
 
-	public void setLocation(GeoPt location) {
-		this.location = location;
+	public void setAigle(int aigle) {
+		this.aigle = aigle;
 	}
+
+	public int getRack() {
+		return rack;
+	}
+
+	public void setRack(int rack) {
+		this.rack = rack;
+	}
+
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
+	}
+
+	public float getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(float latitude) {
+		this.latitude = latitude;
+	}
+
+	public float getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(float longitude) {
+		this.longitude = longitude;
+	}
+
 	
 	
 }

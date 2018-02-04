@@ -6,7 +6,6 @@ import java.util.List;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
-import com.google.api.server.spi.config.Named;
 
 import de.dietzm.colorfulbridge.masterdata.datamodel.Warehouse;
 
@@ -15,7 +14,7 @@ public class WarehouseService {
 
 	@ApiMethod(name = "warehouses.query")
 	public List<Warehouse> getStorageLocations() {
-		return ofy().load().type(Warehouse.class).filter("id !=", null).list();
+		return ofy().load().type(Warehouse.class).list();
 	}
 
 	@ApiMethod(name="warehouses.create", httpMethod = "post")

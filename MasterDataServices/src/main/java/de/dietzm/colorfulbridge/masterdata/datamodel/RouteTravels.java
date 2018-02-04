@@ -1,8 +1,5 @@
 package de.dietzm.colorfulbridge.masterdata.datamodel;
 
-import java.util.List;
-
-import com.google.appengine.api.datastore.GeoPt;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
@@ -18,7 +15,6 @@ public class RouteTravels{
 	@Index
 	StorageBin toLocation;
 	
-	List<GeoPt>  routePoints;
 	String routeAsGeoJson;
 	
 	double lengthInMeter;
@@ -40,12 +36,6 @@ public class RouteTravels{
 	}
 	public void setToLocation(StorageBin toLocation) {
 		this.toLocation = toLocation;
-	}
-	public List<GeoPt> getRoutePoints() {
-		return routePoints;
-	}
-	public void setRoutePoints(List<GeoPt> routePoints) {
-		this.routePoints = routePoints;
 	}
 	public String getRouteAsGeoJson() {
 		return routeAsGeoJson;

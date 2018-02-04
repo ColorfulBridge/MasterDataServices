@@ -1,6 +1,5 @@
 package de.dietzm.colorfulbridge.masterdata.datamodel;
 
-import com.google.appengine.api.datastore.GeoPt;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
@@ -13,8 +12,12 @@ public class Warehouse{
 	
 	@Index
 	String name; 
+	 
+	 
+	float latitude;
+	float longitude;
 	
-	GeoPt location;
+	String outlineAsGeoJSON;
 
 	public String getWarehouseId() {
 		return warehouseId;
@@ -32,15 +35,31 @@ public class Warehouse{
 		this.name = name;
 	}
 
-	public GeoPt getLocation() {
-		return location;
+	public float getLatitude() {
+		return latitude;
 	}
 
-	public void setLocation(GeoPt location) {
-		this.location = location;
+	public void setLatitude(float latitude) {
+		this.latitude = latitude;
 	}
-	
-	
+
+	public float getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(float longitude) {
+		this.longitude = longitude;
+	}
+
+	public String getOutlineAsGeoJSON() {
+		return outlineAsGeoJSON;
+	}
+
+	public void setOutlineAsGeoJSON(String outlineAsGeoJSON) {
+		this.outlineAsGeoJSON = outlineAsGeoJSON;
+	}
+
+
 	
 	
 }
