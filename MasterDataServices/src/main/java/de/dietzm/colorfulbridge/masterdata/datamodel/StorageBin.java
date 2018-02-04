@@ -7,7 +7,7 @@ import com.googlecode.objectify.annotation.Index;
 
 @Entity
 public class StorageBin{
-
+ 
 	@Id
 	String locationId;
 	

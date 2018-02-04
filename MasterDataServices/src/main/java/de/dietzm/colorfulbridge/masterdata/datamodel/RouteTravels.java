@@ -12,7 +12,7 @@ public class RouteTravels{
 
 	@Id
 	String routeId;
-	
+	 
 	@Index
 	StorageBin fromLocation;
 	@Index

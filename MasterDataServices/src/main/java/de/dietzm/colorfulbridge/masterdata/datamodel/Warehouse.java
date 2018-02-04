@@ -8,7 +8,7 @@ import com.googlecode.objectify.annotation.Index;
 @Entity
 public class Warehouse{
 
-	@Id
+	@Id 
 	String warehouseId;
 	
 	@Index

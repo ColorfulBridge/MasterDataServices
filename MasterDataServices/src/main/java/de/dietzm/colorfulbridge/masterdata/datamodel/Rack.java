@@ -11,7 +11,7 @@ public class Rack{
 
 	@Id
 	String rackId;
-	
+	 
 	List<GeoPt>  outlinePolygon;
 	String polygonAsGeoJson;
 	

@@ -4,7 +4,7 @@
 	<threadsafe>true</threadsafe>
 	<sessions-enabled>false</sessions-enabled>
 	<runtime>java8</runtime>
-
+	
 	<module>masterdata</module>
 
 	<!-- <env-variables> <env-var name="ENDPOINTS_SERVICE_NAME" value="colorfulbridge.appspot.com" 
